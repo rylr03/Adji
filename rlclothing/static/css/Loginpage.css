@@ -1,0 +1,321 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: #f2f2f2;
+    align-items: center;
+}
+/* Navbar */
+
+.logo-photo img{
+    height: 60px;
+}
+nav{
+    background-color: #000;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    padding: 0 50px;
+}
+nav .logo-site{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin: 20px;
+}
+nav .nav-items{
+    display: flex;
+    flex: 1;
+    list-style: none;
+    list-style: 0 0 0 40px;
+}
+nav .nav-items li{
+    padding: 0 10px;
+}
+nav .nav-items li, a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+nav .nav-items a:hover{
+    color: rgba(255, 255, 255, 0.315);
+    transition: 0.3s ease-in-out;
+}
+nav form {
+    display: flex;
+    height: 30px;
+    min-width: 18!important;
+}
+nav form .search-data{
+    height: 100%;
+    width: 100%;
+    padding: 0 10px;
+    font-weight: 400;
+    background: none;
+    border: none;
+    background-color: #fff; 
+}
+nav form button{
+    padding: 0 10px;
+    font-size: 17px;
+    cursor: pointer;
+    border: none;
+    font-size: 17px;
+    color: #000000;
+}
+nav form button:hover{
+    color: #fff;
+    background-color: #5f5f5f;
+    transition: 0.3s ease-in-out;
+}
+.cart-button, .account-page{
+    margin: 20px;
+    cursor: pointer;
+}
+.cart-button ion-icon{
+    font-size: 45px;
+    color: #ffffff;
+}
+.cart-button ion-icon:hover{
+    color: #5f5f5f;
+    transition: 0.3s;
+}
+.account-page ion-icon{
+    font-size: 60px; 
+    color: #fff;
+}
+.account-page ion-icon:hover{
+    color: #5f5f5f;
+}
+.account-page p{
+    position: relative;
+    color: #fff;
+    font-size: 9px;
+    margin: -6px 2px 0 0;
+    text-align: center;
+}
+
+/* Sidebar */
+
+.sidebar {
+    width: 270px;
+    background-color: #000;
+    position: absolute;
+    top: 20%;
+    bottom: 50%;
+    left: 0;
+    height: 150%;
+    font-family: 'Poppins', sans-serif;
+}
+.sidebar .logo-sidebar img {
+    margin: 30px 75px;
+    height: 120px;
+}
+.sidebar h2, .sidebar h3, .sidebar h4 {
+    text-align: center;
+    color: #fff;
+}
+.sidebar h2 {
+    font-size: 30px;
+    user-select: none;
+    margin-top: -20px;
+}
+.sidebar h3 {
+    padding: 20px;
+    font-size: 18px; 
+}
+.sidebar h4 {
+    font-size: 12px; 
+    user-select: none;
+}
+.sidebar .contents {
+    list-style: none;
+    padding: 0;
+    margin-top: 40%;
+}
+.sidebar ul h3 {
+    font-size: 15px;
+    user-select: none;
+}
+.contents li {
+    padding: 13px 10px 13px 20px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 14px;
+    transition: 0.3s ease-in-out;
+}
+.sidebar li ion-icon {
+    position: relative;
+    float: right;
+    align-items: center;
+    height: 25px;
+}
+.sidebar a:hover {
+    cursor: pointer;
+    width: auto;
+    color: #000;
+}
+.sidebar i{
+    font-size: 20px;
+    margin-right: 20px;
+}
+.sidebar  i:hover{
+    color: #000;
+
+}
+.contents p {
+    position: absolute;
+    bottom: 0;
+    margin-top: 20%;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgba(255, 255, 255, 0.521);
+}
+
+/* Login Form */
+
+.wrapper .form-box {
+    width: 35%;
+    padding: 35px;
+    position: absolute;
+    top: 50%;
+    right: 23%;
+    background-color: #000;
+    border-radius: 20px;
+    border: 1px solid #fff;
+}
+.form-box img{
+    position: relative;
+    left: 38%;
+    height: 100px;
+}
+.form-box h2 {
+    font-size: 1.7em;
+    color: #fff;
+    text-align: center;
+}
+.form-box h3 {
+    padding-top: 15px;
+    font-size: 1.3em;
+    color: #000;
+    text-align: center;
+}
+.input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #fff;
+    margin: 30px 0;
+}
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+
+}
+.input-box input:focus~label,
+.input-box input:valid~label  {
+    top: -5px;
+
+}
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 0.9em;
+    color: #fff;
+    padding: 0 35px 0 5px;
+    
+}
+.input-box .icon{
+    position: absolute;
+    right: 8px;
+    font-size: 1.3em;
+    color: #ffffff;
+    line-height: 57px;
+}
+.input-box .eye-icon{
+    position: absolute;
+    right: 8px;
+    font-size: 1em;
+    color: #f2f2f2;
+    line-height: 55px;
+    padding-right: 30px;
+    cursor: pointer;
+
+
+}
+.remember-forgot{
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+    margin: -5px 0 15px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.remember-forgot label input {
+    accent-color: #fff;
+    margin-right: 3px;
+}
+.remember-forgot a {
+    font-size: 1em;
+    color: #ed3939;
+    text-decoration: none;
+
+}
+.remember-forgot a:hover{
+    text-decoration: underline;
+
+}
+.btn{
+    width: 100%;
+    height: 45px;
+    background: #121312;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+}
+.btn:hover{
+    background-color: rgba(31, 31, 31, 0.74);
+    transition: 0.5s;
+}
+.login-register{
+    color: #fff;
+    text-align: center;
+    font-size: 1em;
+    margin: 20px 0 5px;
+    
+}
+.login-register p a {
+    color: #4b5bef;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1em;
+
+}
+.login-register p a:hover {
+    text-decoration: underline;
+    
+}
+

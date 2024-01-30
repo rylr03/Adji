@@ -1,0 +1,230 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{% static '/css/aboutpage.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static '/images/favicon1.png' %}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+
+
+    <title>About</title>
+
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+      <div class="logo-photo">
+          <img src="{% static '/images/logocolored.jpg' %}" alt="Logo Here">
+      </div>
+      <div class="logo-site">RL CLOTHING</div>
+      <div class="nav-items">
+          <li><a href="{% url 'homepage' %}">Home</a></li>
+          <li><a href="{% url 'productpage' %}">Products</a></li>
+          <li><a href="{% url 'aboutpage' %}">About</a></li>
+          <li><a href="{% url 'orderspage' %}">Order</a></li>
+          <li><a href="{% url 'regiscusto' %}">Register</a></li>
+      </div>
+  
+  </nav>
+  
+  <div class="sidebar"> 
+      <div class="logo-sidebar">
+          <img src="{% static '/images/logocolored.jpg' %}" alt="Logo Here">
+      </div>
+      <h2>RL CLOTHING</h2>
+      <h4>Online Clothing Store</h4>
+      <div class="contents">
+      <ul>
+          <h3>Menu</h3>
+          <li> <a href="{% url 'homepage' %}"><i class="fa-solid fa-house"></i>Home<ion-icon name="chevron-forward-outline"></ion-icon></a></li>
+
+          <li> <a href="{% url 'productpage' %}"><i class="fa-solid fa-gift"></i>Products<ion-icon name="chevron-forward-outline"></ion-icon></a></li>
+
+          <li> <a href="{% url 'aboutpage' %}"><i class="fa-solid fa-circle-info"></i>About<ion-icon name="chevron-forward-outline"></ion-icon></a></li>
+  
+          <li> <a href="{% url 'orderspage' %}"><i class="fa-solid fa-bag-shopping"></i>Order<ion-icon name="chevron-forward-outline"></ion-icon></a></li>
+          
+          <li> <a href="{% url 'regiscusto' %}"><i class="fa-solid fa-user-plus"></i>Register<ion-icon name="chevron-forward-outline"></ion-icon></a></li>
+
+          <h3>Categories</h3>
+
+          <li> <a href="{% url 'productpage' %}#Womensection"><i class="fa-solid fa-person-dress"></i></i></i>Women</a><ion-icon name="chevron-forward-outline"></ion-icon></a></li>
+  
+          <li> <a href="{% url 'productpage' %}#Mensection"><i class="fa-solid fa-person"></i>Men</a><ion-icon name="chevron-forward-outline"></ion-icon></a></li>
+  
+          <li> <a href="{% url 'productpage' %}#Kidsection"><i class="fa-solid fa-child"></i>Kids</a><ion-icon name="chevron-forward-outline"></ion-icon></a></li>
+  
+  
+          <p>&copy RL Clothing Online Clothing Store - All Rights Reserved.</p>
+        </ul>
+  </div>
+  </div>
+</div>
+
+    <div class="wrapper">
+      <div class="intro">
+        <h1>ABOUT US</h1>
+        <h2>RL Clothing Online Clothing Store</h2>
+        <p>
+          Welcome to RL Clothing, where our T-shirts redefine casual elegance. Each stitch is a testament to our commitment to quality and style, ensuring that every piece becomes a canvas 
+          for self-expression. From timeless classics to contemporary designs, our T-shirts seamlessly blend comfort and fashion. At RL Clothing, we believe that your wardrobe should be a reflection 
+          of your unique identity, and our T-shirts are designed to make that statement effortlessly. Explore our collection and experience the perfect fusion of comfort and style, where each T-shirt is not 
+          just an article of clothing but a symbol of individuality. Welcome to RL Clothing, where every thread tells a story.</p>
+        </div>
+        <div class="vismission">
+          <div class="mission-holder">
+            <img src="{% static '/images/na_feb_25.jpg' %}">
+            <div class="content">
+            <h2>Mission</h2>
+            <p>Our skilled team members are fully committed to providing our partners with solid solutions. They proactively 
+              provide complete support and guidance throughout the entire process. After all, we are jointly responsible for 
+              the end result.</p>
+          </div>
+        </div>
+          <div class="vision-holder">
+            <img src="{% static '/images/20616.jpg' %}">
+            <div class="content">
+            <h2>Vision</h2>
+            <p>We are RL Clothing. Our service-oriented organisation is committed to offering partners the best possible solution
+               on a daily basis, with their wishes and requirements as the primary focus.</p>
+            </div>
+          </div>
+        </div>
+
+    <div class="team">
+      <div class="team-title">
+        <h2>Our Team</h2>
+      </div>
+      <div class="box-container">
+        <div class="box">
+          <img src="{% static '/images/Larpic.jpg' %}" onclick="showPopup(this)">
+          <div class="box-content">
+            <h3>Rey R. Lar</h3>
+            <h4>20 Years Old</h4>
+            <h4>Student at CVSU-Bacoor</h4>
+          </div>
+        </div>
+        <div class="box">
+          <img src="{% static '/images/Larpic.jpg' %}" onclick="showPopup(this)">
+          <div class="box-content">
+            <h3>Rey R. Lar</h3>
+            <h4>20 Years Old</h4>
+            <h4>Student at CVSU-Bacoor</h4>
+          </div>
+        </div>
+        <div class="box">
+          <img src="{% static '/images/Larpic.jpg' %}" onclick="showPopup(this)">
+          <div class="box-content">
+            <h3>Rey R. Lar</h3>
+            <h4>20 Years Old</h4>
+            <h4>Student at CVSU-Bacoor</h4>
+          </div>
+        </div>
+        <div class="box">
+          <img src="{% static '/images/Larpic.jpg' %}" onclick="showPopup(this)">
+          <div class="box-content">
+            <h3>Rey R. Lar</h3>
+            <h4>20 Years Old</h4>
+            <h4>Student at CVSU-Bacoor</h4>
+          </div>
+        </div>
+        <div class="box">
+          <img src="{% static '/images/Larpic.jpg' %}" onclick="showPopup(this)">
+          <div class="box-content">
+            <h3>Rey R. Lar</h3>
+            <h4>20 Years Old</h4>
+            <h4>Student at CVSU-Bacoor</h4>
+          </div>
+        </div>
+        <div class="box">
+          <img src="{% static '/images/Larpic.jpg' %}" onclick="showPopup(this)">
+          <div class="box-content">
+            <h3>Rey R. Lar</h3>
+            <h4>20 Years Old</h4>
+            <h4>Student at CVSU-Bacoor</h4>
+          </div>
+        </div>
+        <div class="box">
+          <img src="{% static '/images/Larpic.jpg' %}" onclick="showPopup(this)">
+          <div class="box-content">
+            <h3>Rey R. Lar</h3>
+            <h4>20 Years Old</h4>
+            <h4>Student at CVSU-Bacoor</h4>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col">
+                <h4>Menus</h4>
+                <ul>
+                  <li><a href="{% url 'homepage' %}"> Home</a></li>
+                  <li><a href="{% url 'productpage' %}">Products</a></li>
+                  <li><a href="{% url 'orderspage' %}">Order</a></li>
+                  <li><a href="{% url 'regiscusto' %}">Register</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Categories</h4>
+                <ul>
+                    <li><a href="{% url 'productpage' %}#Womensection">Women</a></li>
+                    <li><a href="{% url 'productpage' %}#Mensection">Men</a></li>
+                    <li><a href="{% url 'productpage' %}#Kidsection">Kids</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="{% url 'aboutpage' %}">About Us</a></li>
+
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.pinterest.com/" target="_blank"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div id="cartSidebar" class="cart-sidebar">
+  <div class="cart-sidebar-content">
+      <span class="close-btn" onclick="closeCartSidebar()">&times;</span>
+      <h2><i class="fa-solid fa-cart-shopping"></i> Cart</h2>
+      <div id="cartItems" class="cart-items"></div>
+      <div class="buttons-container1">
+          <button class="buy-all-btn" onclick="buyAll()">Buy All</button>
+          <button class="delete-all-btn" onclick="deleteAll()">Delete All</button>
+      </div>
+      <p id="emptyCartMessage" class="empty-cart-message">No Items Available</p>
+  </div>
+</div>
+
+<div id="popupContainer" class="popup-container" onclick="hidePopup()">
+<div class="popup-content">
+  <img id="popupImage" class="popup-image">
+</div>
+
+<script src="{% static '/js/sidebar.js' %}"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

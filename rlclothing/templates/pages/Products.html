@@ -1,0 +1,107 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="/images/Logoqwerty.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="{% static '/css/admin.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static '/images/favicon1.png' %}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+
+    <title>Admin</title>
+
+</head>
+
+<body>
+<!-- Navigation Bar -->
+    <nav>
+        <div class="logo-site">Dash Board</div>
+        <div class="nav-items">
+            <li><a href="{% url 'dashboard' %}" style="color: #fff;">Home</a></li>
+            <li><a href="{% url 'productadmin' %}" style="color: #fff;">Products</a></li>
+            <li><a href="{% url 'approvalspage' %}" style="color: #fff;">Order Approvals</a></li>
+        </div>
+    </nav>
+
+    <div class="admin-wrapper">
+
+      <table class="table">
+        <thead>
+            <div class="title-contain">
+                <h1 align="center">Product Info</h1>
+                <a href="{% url 'create_product' %}">Create New Product</a>
+            </div>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Type</th>
+                <th scope="col">Category</th>
+                <th scope="col">Color</th>
+                <th scope="col">Price</th>
+                <th scope="col">Image</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for product in products %}
+            <tr>
+                <th scope="row">{{ product.id }}</th>
+                <td>{{ product.product_name }}</td>
+                <td>{{ product.product_type }}</td>
+                <td>{{ product.product_category }}</td>
+                <td>{{ product.color }}</td>
+                <td>{{ product.price }}</td>
+                <td>
+                  {% if product.image %}
+                      <img src="{{ product.image.url }}" height="50px">
+                  {% else %}
+                      No Image
+                  {% endif %}
+              </td>
+                <td>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Choose
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{% url 'update_product' product.id %}" style="color: #000;">Update</a></li>
+                            <li>
+                                <form method="post" action="{% url 'delete_product' product.id %}">
+                                    {% csrf_token %}
+                                    <button type="submit" class="dropdown-item" style="color: #000;">Delete</button>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+      
+
+  {% block content %}
+
+
+  {% endblock  %}
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</body>
+</body>
+</html>

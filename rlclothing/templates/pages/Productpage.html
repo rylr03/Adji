@@ -1,0 +1,421 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{% static '/css/Productpage.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static '/images/favicon1.png' %}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+
+    
+
+    <title>Products</title>
+
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+      <div class="logo-photo">
+          <img src="{% static '/images/logocolored.jpg' %}" alt="Logo Here">
+      </div>
+      <div class="logo-site">RL CLOTHING</div>
+      <div class="nav-items">
+        <li><a href="{% url 'homepage' %}">Home</a></li>
+        <li><a href="{% url 'productpage' %}">Products</a></li>
+        <li><a href="{% url 'aboutpage' %}">About</a></li>
+        <li><a href="{% url 'orderspage' %}">Order</a></li>
+        <li><a href="{% url 'regiscusto' %}">Register</a></li>
+      </div>
+      <form action="#">
+             <input type="search" class="search-data" placeholder="Search Here" required>
+             <button type="submit" class="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </form>
+
+  
+  </nav>
+  
+  <div class="sidebar"> 
+      <div class="logo-sidebar">
+          <img src="{% static '/images/logocolored.jpg' %}" alt="Logo Here">
+      </div>
+      <h2>RL CLOTHING</h2>
+      <h4>Online Clothing Store</h4>
+      <div class="contents">
+      <ul>
+          <h3>Menu</h3>
+          <li> <a href="{% url 'homepage' %}"><i class="fa-solid fa-house"></i>Home<ion-icon name="chevron-forward-outline"></ion-icon></a></li>
+
+          <li> <a href="{% url 'productpage' %}"><i class="fa-solid fa-gift"></i>Products<ion-icon name="chevron-forward-outline"></ion-icon></a></li>
+
+          <li> <a href="{% url 'aboutpage' %}"><i class="fa-solid fa-circle-info"></i>About<ion-icon name="chevron-forward-outline"></ion-icon></a></li>
+  
+          <li> <a href="{% url 'orderspage' %}"><i class="fa-solid fa-bag-shopping"></i>My Orders<ion-icon name="chevron-forward-outline"></ion-icon></a></li>
+          
+          <li> <a href="{% url 'regiscusto' %}"><i class="fa-solid fa-user-plus"></i>Register<ion-icon name="chevron-forward-outline"></ion-icon></a></li>
+
+          <h3>Categories</h3>
+
+          <li> <a href="{% url 'productpage' %}#Womensection"><i class="fa-solid fa-person-dress"></i></i></i>Women</a><ion-icon name="chevron-forward-outline"></ion-icon></a></li>
+  
+          <li> <a href="{% url 'productpage' %}#Mensection"><i class="fa-solid fa-person"></i>Men</a><ion-icon name="chevron-forward-outline"></ion-icon></a></li>
+  
+          <li> <a href="{% url 'productpage' %}#Kidsection"><i class="fa-solid fa-child"></i>Kids</a><ion-icon name="chevron-forward-outline"></ion-icon></a></li>
+  
+  
+          <p>&copy RL Clothing Online Clothing Store - All Rights Reserved.</p>
+        </ul>
+  </div>
+  </div>
+</div>
+<div class="wrapper">
+    <div class="slider-content">
+  <div class="slider-container">
+    <div class="slider">
+      <div class="slide" id="slide1"><img src="{% static '/images/bg.jpg' %}" alt="Slide 1"></div>
+      <div class="slide" id="slide2"><img src="{% static '/images/bggg.jpg' %}" alt="Slide 2"></div>
+      <div class="slide" id="slide3"><img src="{% static '/images/bghome.jpeg' %}" alt="Slide 3"></div>
+    </div>
+  
+    <div class="dots-container">
+      <div class="dot" onclick="goToSlide(0)"></div>
+      <div class="dot" onclick="goToSlide(1)"></div>
+      <div class="dot" onclick="goToSlide(2)"></div>
+    </div>
+  </div>
+</div>
+<div class="holder-wrapper">
+<div class="page-contents" id="Womensection">
+  <h2>Womens</h2>
+  <hr>
+  <div class="product-box">
+      <div class="box">
+        <img src="{% static '/images/Pink Women.jpg' %}" onclick="showPopup(this)">
+          <div class="box-content">
+              <h2>Pink Plain</h2>
+                <div class="info-item">
+                  <h3>Features:</h3>
+                  <h4>Fabrics: <span>Cotton</span></h4>
+                  <h4>Size: <span> S,M,L,XL</span></h4>
+                  <h4>Total Sold: <span>5.2k Sold</span></h4>
+                  <h5 class="rating">Ratings: <div class="star-holder">  
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span></div> </h5>
+                </div>
+              <div class="buttons-container">
+                <div class="price-product">
+                  <p class="price" id="price1">₱99.00</p>
+                </div>
+                  <div class="buttons">
+                    <a href="{% url 'orderspage' %}"><button class="buy-now-btn">Buy</button></a>
+                </div>
+              </div>
+        </div>
+    </div>
+      <div class="box">
+        <img src="{% static '/images/Red Women.jpg' %}" onclick="showPopup(this)">
+        <div class="box-content">
+            <h2>Red Plain</h2>
+            <div class="info-item">
+                <h3>Features:</h3>
+                <h4>Fabric: <span>Cotton</span></h4>
+                <h4>Size: <span>S,M,L,XL</span></h4>
+                <h4>Total Sold: <span>2.7k Sold</span></h4>
+                <h5 class="rating">Ratings: <div class="star-holder">  
+                  <span class="star"></span>
+                  <span class="star"></span>
+                  <span class="star"></span>
+                  <span class="star"></span>
+                  <span class="star"></span></div> </h5>
+              </div>
+            <div class="buttons-container">
+              <div class="price-product">
+                <p class="price" id="price1">₱99.00</p>
+              </div>
+                <div class="buttons">
+                  <a href="{% url 'orderspage' %}"><button class="buy-now-btn">Buy</button></a>
+              </div>
+           </div>
+       </div>
+  </div>
+      <div class="box">
+        <img src="{% static '/images/Blue Women.jpg' %}" onclick="showPopup(this)">
+        <div class="box-content">
+            <h2>Blue Plain</h2>
+            <div class="info-item">
+              <h3>Features:</h3>
+              <h4>Fabrics: <span>Cotton</span></h4>
+              <h4>Size: <span>S,M,L,XL</span></h4>
+              <h4>Total Sold: <span>3.9k Sold</span></h4>
+              <h5 class="rating">Ratings: <div class="star-holder">  
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span></div> </h5>
+            </div>
+        <div class="buttons-container">
+          <div class="price-product">
+            <p class="price" id="price1">₱99.00</p>
+          </div>
+            <div class="buttons">
+              <a href="{% url 'orderspage' %}"><button class="buy-now-btn">Buy</button></a>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+<div class="page-contents" id="Mensection">
+  <h2>Mens</h2>
+  <hr>
+  <div class="product-box">
+      <div class="box">
+          <img src="{% static '/images/Blue Men.jpg' %}" onclick="showPopup(this)">
+          <div class="box-content">
+              <h2>Blue Plain</h2>
+                <div class="info-item">
+                  <h3>Features:</h3>
+                  <h4>Fabric: <span>Cotton</span></h4>
+                  <h4>Size: <span>S,M,L,XL</span></h4>
+                  <h4>Total Sold: <span>6.2k Sold</span></h4>
+                  <h5 class="rating">Ratings: <div class="star-holder">  
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span></div> </h5>
+                </div>
+              <div class="buttons-container">
+                <div class="price-product">
+                  <p class="price" id="price1">₱99.00</p>
+                </div>
+                  <div class="buttons">
+                    <a href="{% url 'orderspage' %}"><button class="buy-now-btn">Buy</button></a>
+                </div>
+              </div>
+        </div>
+    </div>
+      <div class="box">
+        <img src="{% static '/images/Gray Men.jpg' %}" onclick="showPopup(this)">
+        <div class="box-content">
+            <h2>Gray Plain</h2>
+            <div class="info-item">
+                <h3>Features:</h3>
+                <h4>Fabrics: <span>Cotton</span></h4>
+                <h4>Size: <span>S,M,L,XL</span></h4>
+                <h4>Total Sold: <span>=3.0k Sold</span></h4>
+                <h5 class="rating">Ratings: <div class="star-holder">  
+                  <span class="star"></span>
+                  <span class="star"></span>
+                  <span class="star"></span>
+                  <span class="star"></span>
+                  <span class="star"></span></div> </h5>
+            </div>
+            <div class="buttons-container">
+              <div class="price-product">
+                <p class="price" id="price1">₱99.00</p>
+              </div>
+                <div class="buttons">
+                  <a href="{% url 'orderspage' %}"><button class="buy-now-btn">Buy</button></a>
+              </div>
+           </div>
+       </div>
+  </div>
+      <div class="box">
+        <img src="{% static '/images/Black Men.jpg' %}" onclick="showPopup(this)">
+        <div class="box-content">
+            <h2>Black Plain</h2>
+            <div class="info-item">
+                <h3>Features:</h3>
+                <h4>Fabrics: <span>Cotton</span></h4>
+                <h4>Size: <span>S,M,L,XL</span></h4>
+                <h4>Total Sold: <span>4.0k Sold</span></h4>
+                <h5 class="rating">Ratings: <div class="star-holder">  
+                  <span class="star"></span>
+                  <span class="star"></span>
+                  <span class="star"></span>
+                  <span class="star"></span>
+                  <span class="star"></span></div> </h5>
+                </div>
+        <div class="buttons-container">
+          <div class="price-product">
+            <p class="price" id="price1">₱99.00</p>
+          </div>
+            <div class="buttons">
+              <a href="{% url 'orderspage' %}"><button class="buy-now-btn">Buy</button></a>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+<div class="page-contents" id="Kidsection">
+  <h2>Kids</h2>
+  <hr>
+  <div class="product-box">
+      <div class="box">
+          <img src="{% static '/images/Green Kids Boy.jpg' %}" onclick="showPopup(this)">
+          <div class="box-content">
+              <h2>Green Plain</h2>
+                <div class="info-item">
+                  <h3>Features:</h3>
+                  <h4>Fabrics: <span>Cotton</span></h4>
+                  <h4>Size: <span>S,M,L,XL</span></h4>
+                  <h4>Type: <span>Boys</span></h4>
+                  <h4>Total Sold: <span>5.5k Sold</span></h4>
+                  <h5 class="rating">Ratings: <div class="star-holder">  
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span></div> </h5>
+                </div>
+              <div class="buttons-container">
+                <div class="price-product">
+                  <p class="price" id="price1">₱89.00</p>
+                </div>
+                  <div class="buttons">
+                    <a href="{% url 'orderspage' %}"><button class="buy-now-btn">Buy</button></a>
+                </div>
+              </div>
+        </div>
+    </div>
+      <div class="box">
+        <img src="{% static '/images/Red Kid Girl.jpg' %}" onclick="showPopup(this)">
+        <div class="box-content">
+            <h2>Red Plain</h2>
+            <div class="info-item">
+                <h3>Features:</h3>
+                <h4>Fabrics: <span>Cotton</span></h4>
+                <h4>Size: <span>S,M,L,XL</span></h4>
+                <h4>Type: <span>Girls</span></h4>
+                <h4>Total Sold: <span>2.2k Sold</span></h4>
+                <h5 class="rating">Ratings: <div class="star-holder">  
+                  <span class="star"></span>
+                  <span class="star"></span>
+                  <span class="star"></span>
+                  <span class="star"></span>
+                  <span class="star"></span></div> </h5>
+            </div>
+            <div class="buttons-container">
+              <div class="price-product">
+                <p class="price" id="price1">₱89.00</p>
+              </div>
+                <div class="buttons">
+                  <a href="{% url 'orderspage' %}"><button class="buy-now-btn">Buy</button></a>
+              </div>
+           </div>
+       </div>
+      </div>
+      <div class="box">
+        <img src="{% static '/images/Purple Kids Boy.jpg' %}" onclick="showPopup(this)">
+        <div class="box-content">
+            <h2>Purple Plain</h2>
+            <div class="info-item">
+              <h3>Features:</h3>
+              <h4>Fabrics: <span>Cotton</span></h4>
+              <h4>Size: <span>S,M,L,XL</span></h4>
+              <h4>Type: <span>Boys</span></h4>
+              <h4>Total Sold: <span>1.1k Sold</span></h4>
+              <h5 class="rating">Ratings: <div class="star-holder">  
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span></div> </h5>
+          </div>
+        <div class="buttons-container">
+          <div class="price-product">
+            <p class="price" id="price1">₱89.00</p>
+          </div>
+            <div class="buttons">
+              <a href="{% url 'orderspage' %}"><button class="buy-now-btn">Buy</button></a>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<footer class="footer">
+  <div class="container">
+      <div class="row">
+          <div class="footer-col">
+              <h4>Menus</h4>
+              <ul>
+                <li><a href="{% url 'homepage' %}"> Home</a></li>
+                <li><a href="{% url 'productpage' %}">Products</a></li>
+                <li><a href="{% url 'orderspage' %}">Order</a></li>
+                <li><a href="{% url 'regiscusto' %}">Register</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+              <h4>Categories</h4>
+              <ul>
+                <li><a href="{% url 'productpage' %}#Womensection">Women</a></li>
+                <li><a href="{% url 'productpage' %}#Mensection">Men</a></li>
+                <li><a href="{% url 'productpage' %}#Kidsection">Kids</a></li>
+              </ul>
+          </div>
+          <div class="footer-col">
+              <h4>Company</h4>
+              <ul>
+                  <li><a href="Aboutpage.html">About Us</a></li>
+
+              </ul>
+          </div>
+          <div class="footer-col">
+              <h4>Follow Us</h4>
+              <div class="social-links">
+                  <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                  <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                  <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                  <a href="https://www.pinterest.com/" target="_blank"><i class="fab fa-pinterest"></i></a>
+              </div>
+          </div>
+      </div>
+  </div>
+</footer>
+
+
+
+
+<div id="popupContainer" class="popup-container" onclick="hidePopup()">
+  <div class="popup-content">
+    <img id="popupImage" class="popup-image">
+  </div>
+
+  <script src="{% static '/js/sidebar.js' %}"></script>
+    
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

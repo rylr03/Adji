@@ -1,0 +1,247 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="{% static '/css/Homepage.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static '/images/favicon1.png' %}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+
+
+    <title>Homepage</title>
+
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo-photo">
+            <img src="{% static '/images/logocolored.jpg' %}" alt="Logo Here">
+        </div>
+        <div class="logo-site">RL CLOTHING</div>
+        <div class="nav-items">
+            <li><a href="{% url 'homepage' %}">Home</a></li>
+            <li><a href="{% url 'productpage' %}">Products</a></li>
+            <li><a href="{% url 'aboutpage' %}">About</a></li>
+            <li><a href="{% url 'orderspage' %}">Order</a></li>
+            <li><a href="{% url 'regiscusto' %}">Register</a></li>
+        </div>
+
+    
+    </nav>
+    
+    <div class="sidebar"> 
+        <div class="logo-sidebar">
+            <img src="{% static '/images/logocolored.jpg' %}" alt="Logo Here">
+        </div>
+        <h2>RL CLOTHING</h2>
+        <h4>Online Clothing Store</h4>
+        <div class="contents">
+        <ul>
+            <h3>Menu</h3>
+            <li> <a href="{% url 'homepage' %}"><i class="fa-solid fa-house"></i>Home<ion-icon name="chevron-forward-outline"></ion-icon></a></li>
+
+            <li> <a href="{% url 'productpage' %}"><i class="fa-solid fa-gift"></i>Products<ion-icon name="chevron-forward-outline"></ion-icon></a></li>
+
+            <li> <a href="{% url 'aboutpage' %}"><i class="fa-solid fa-circle-info"></i>About<ion-icon name="chevron-forward-outline"></ion-icon></a></li>
+    
+            <li> <a href="{% url 'orderspage' %}"><i class="fa-solid fa-bag-shopping"></i>Order<ion-icon name="chevron-forward-outline"></ion-icon></a></li>
+            
+            <li> <a href="{% url 'regiscusto' %}"><i class="fa-solid fa-user-plus"></i>Register<ion-icon name="chevron-forward-outline"></ion-icon></a></li>
+
+            <h3>Categories</h3>
+
+            <li> <a href="{% url 'productpage' %}#Womensection"><i class="fa-solid fa-person-dress"></i></i></i>Women</a><ion-icon name="chevron-forward-outline"></ion-icon></a></li>
+    
+            <li> <a href="{% url 'productpage' %}#Mensection"><i class="fa-solid fa-person"></i>Men</a><ion-icon name="chevron-forward-outline"></ion-icon></a></li>
+    
+            <li> <a href="{% url 'productpage' %}#Kidsection"><i class="fa-solid fa-child"></i>Kids</a><ion-icon name="chevron-forward-outline"></ion-icon></a></li>
+    
+    
+            <p>&copy RL Clothing Online Clothing Store - All Rights Reserved.</p>
+        </ul>
+    </div>
+    </div>
+  </div>
+    <div class="wrapper">
+        <div class="img-box"></div>
+    <div class="title-contain">
+        <h1>RL Clothing</h1>
+        <h3>Online Clothing Store</h3>
+    </div>
+        <div class="intro-info">
+            <h1>Welcome Shoppers!</h1>
+            <p> Welcome to RL Clothing, where style and individuality converge in a harmonious dance of fashion. At RL, we believe in clothing as a form of self-expression, and our carefully curated collection reflects this ethos. 
+                From timeless classics to cutting-edge trends, our garments are designed to empower you to showcase your unique personality. Step into a realm where every stitch tells a story, and each piece is a canvas for your personal narrative. 
+                RL Clothing is more than just fashion; it's a celebration of authenticity and the art of being yourself. </p>
+        </div>
+        <div class="box-features">
+            <div class="title-text">
+                <h1>To Our Shop</h1>
+            </div>
+            <div class="box-container">
+                <div class="content-container">
+                <h2>⚡ Power Up Your Connectivity:</h2>
+                <p>Never miss a beat with our high-performance phone chargers and power banks. Whether you're at home, in the office, or on the go, our charging solutions are designed to 
+                   keep your devices powered up and ready for action.</p>
+                </div>
+            </div>
+            <div class="box-container">
+                <div class="content-container">
+                <h2>🎧 Elevate Your Audio Experience:</h2>
+                <p>Immerse yourself in superior sound quality with our collection of headsets and earphones. From crisp audio during your workout sessions to immersive music experiences, 
+                    our range ensures that you stay connected to your favorite tunes with comfort and style.</p>
+                </div>
+            </div>
+            <div class="box-container">
+                <div class="content-container">
+                <h2>📱 Protect Your Investment in Style:</h2>
+                <p>Give your phone the love and protection it deserves with our chic and durable phone cases. Our diverse selection ensures that you find the perfect match to reflect your individuality 
+                   while safeguarding your device from everyday bumps and scratches.</p>
+                </div>
+            </div>
+            <div class="box-container">
+                <div class="content-container">
+                <h2>🌐 Explore Limitless Possibilities:</h2>
+                <p>Browse through our user-friendly website to explore the latest trends and innovations in phone accessories. With an intuitive interface and secure payment options, shopping for the perfect 
+                   has never been this convenient.</p>
+                </div>
+            </div>
+            <div class="box-container">
+                <div class="content-container">
+                <h2>🛍️ Shop with Confidence:</h2>
+                <p>At , Sixth Gen, we prioritize quality and customer satisfaction. Each product is carefully selected to meet our stringent standards, ensuring that you receive nothing but the best. Our dedicated customer support team is always ready to assist you, making your shopping experience hassle-free.
+
+                    Revitalize your mobile lifestyle with Sixth Gen. Elevate your phone experience today! 🚀</p>
+                </div>
+            </div>
+        </div>
+    <div class="page-contents">
+        <h2>Popular Products</h2>
+        <div class="product-box">
+            <div class="box">
+                <img src="{% static '/images/Pink Women.jpg' %}" onclick="showPopup(this)">
+                <div class="box-content">
+                    <h2>Plain T-shirts(Women)</h2>
+                    <div class="info-item">
+                        <h3>Features:</h3>
+                        <h4>Fabric: <span>Cotton</span></h4>
+                        <h4>Colors: <span>Pink, Blue, Red</span></h4>
+                        <h4>Total Sold: <span>5.2k Sold</span></h4>
+                        <h5 class="rating">Ratings:  
+                                        <span class="star"></span>
+                                        <span class="star"></span>
+                                        <span class="star"></span>
+                                        <span class="star"></span>
+                                        <span class="star"></span>
+                        </h5>
+                    </div>
+                    <a href="{% url 'productpage' %}#Womensection"><button type="submit" class="btn">View</button></a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="{% static '/images/Blue Men.jpg' %}" onclick="showPopup(this)">
+                <div class="box-content">
+                    <h2>Plain T-shirts(Men)</h2>
+                    <div class="info-item">
+                        <h3>Features:</h3>
+                        <h4>Fabric: <span>Cotton</span></h4>
+                        <h4>Colors: <span>Blue, Gray, Black</span></h4>
+                        <h4>Total Sold: <span>6.2k Sold</span></h4>
+                        <h5 class="rating">Ratings:  
+                                        <span class="star"></span>
+                                        <span class="star"></span>
+                                        <span class="star"></span>
+                                        <span class="star"></span>
+                                        <span class="star"></span>
+                        </h5>
+                    </div>
+                    <a href="{% url 'productpage' %}#Mensection"><button type="submit" class="btn">View</button></a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="{% static '/images/Green Kids Boy.jpg' %}" onclick="showPopup(this)">
+                <div class="box-content">
+                    <h2>Plain T-shirts(Kids)</h2>
+                    <div class="info-item">
+                        <h3>Features:</h3>
+                        <h4>Fabric: <span>Cotton</span></h4>
+                        <h4>Colors: <span>Green, Purple, Red</span></h4>
+                        <h4>Total Sold: <span>4.8k Sold</span></h4>
+                        <h5 class="rating">Ratings:  
+                                        <span class="star"></span>
+                                        <span class="star"></span>
+                                        <span class="star"></span>
+                                        <span class="star"></span>
+                                        <span class="star"></span>
+                        </h5>
+                    </div>
+                </div>
+                <a href="{% url 'productpage' %}#Kidsection"><button type="submit" class="btn" >View</button></a>
+            </div>
+        </div>
+        </div>
+        </div>
+
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Menus</h4>
+                    <ul>
+                        <li><a href="{% url 'homepage' %}"> Home</a></li>
+                        <li><a href="{% url 'productpage' %}">Products</a></li>
+                        <li><a href="{% url 'orderspage' %}">My Orders</a></li>
+                        <li><a href="{% url 'regiscusto' %}">Register</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="{% url 'productpage' %}#Womensection">Women</a></li>
+                        <li><a href="{% url 'productpage' %}#Mensection">Men</a></li>
+                        <li><a href="{% url 'productpage' %}#Kidsection">Kids</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="{% url 'aboutpage' %}">About Us</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.pinterest.com/" target="_blank"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+   </footer>
+
+
+<div id="popupContainer" class="popup-container" onclick="hidePopup()">
+  <div class="popup-content">
+    <img id="popupImage" class="popup-image">
+  </div>
+
+
+    <script src="{% static '/js/sidebar.js' %}"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

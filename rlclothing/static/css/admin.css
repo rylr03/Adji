@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: #f2f2f2;
+    align-items: center;
+}
+/* Navbar */
+
+.logo-photo img{
+    height: 60px;
+}
+nav{
+    background-color: #000;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    padding: 0 50px;
+}
+nav .logo-site{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin: 20px;
+}
+nav .nav-items{
+    display: flex;
+    flex: 1;
+    list-style: none;
+    list-style: 0 0 0 40px;
+}
+nav .nav-items li{
+    padding: 0 10px;
+}
+nav .nav-items a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+nav .nav-items a:hover{
+    color: rgba(255, 255, 255, 0.315);
+    transition: 0.3s ease-in-out;
+}
+
+.admin-wrapper{
+    margin-top: 5%;
+}
+table{
+    max-width: 30%;
+    padding-top: 15%;
+    margin: 50px 0 50px 220px ;
+}
+table th{
+    padding: 20px;
+    color: #fff;
+    background-color: #000;
+    text-align: center;
+}
+.table h1{
+    margin-top: 40px;
+    text-align: center;
+}
+.table th{
+    padding: 20px;
+    text-align: center;
+}
+table td{
+    padding: 20px;
+    justify-content: center;
+}
+.title-contain{
+    justify-content: space-between;
+}
+.title-contain a{
+    padding: 10px;
+    border: #000;
+}

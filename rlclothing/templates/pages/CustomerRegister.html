@@ -1,0 +1,98 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="/images/Logoqwerty.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="{% static '/css/Register.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static '/images/favicon1.png' %}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+
+
+    <title>Register</title>
+
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo-photo">
+            <img src="{% static '/images/logocolored.jpg' %}" alt="Logo Here">
+        </div>
+        <div class="logo-site">RL CLOTHING</div>
+        <div class="nav-items">
+            <li><a href="{% url 'homepage' %}">Home</a></li>
+            <li><a href="{% url 'productpage' %}">Products</a></li>
+            <li><a href="{% url 'aboutpage' %}">About</a></li>
+            <li><a href="{% url 'orderspage' %}">Order</a></li>
+            <li><a href="{% url 'regiscusto' %}">Register</a></li>
+        </div>
+        <form action="#">
+               <input type="search" class="search-data" placeholder="Search Here" required>
+               <button type="submit" class="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+        
+    
+    </nav>
+    
+    <div class="sidebar"> 
+        <div class="logo-sidebar">
+            <img src="{% static '/images/logocolored.jpg' %}" alt="Logo Here">
+        </div>
+        <h2>RL CLOTHING</h2>
+        <h4>Online Clothing Store</h4>
+        <div class="contents">
+        <ul>
+            <h3>Menu</h3>
+            <li> <a href="{% url 'homepage' %}"><i class="fa-solid fa-house"></i>Home<ion-icon name="chevron-forward-outline"></ion-icon></a></li>
+
+            <li> <a href="{% url 'productpage' %}"><i class="fa-solid fa-gift"></i>Products<ion-icon name="chevron-forward-outline"></ion-icon></a></li>
+
+            <li> <a href="{% url 'aboutpage' %}"><i class="fa-solid fa-circle-info"></i>About<ion-icon name="chevron-forward-outline"></ion-icon></a></li>
+    
+            <li> <a href="{% url 'orderspage' %}"><i class="fa-solid fa-bag-shopping"></i>My Orders<ion-icon name="chevron-forward-outline"></ion-icon></a></li>
+            
+            <li> <a href="{% url 'regiscusto' %}"><i class="fa-solid fa-user-plus"></i>Register<ion-icon name="chevron-forward-outline"></ion-icon></a></li>
+
+            <h3>Categories</h3>
+
+            <li> <a href="{% url 'productpage' %}#Womensection"><i class="fa-solid fa-person-dress"></i></i></i>Women</a><ion-icon name="chevron-forward-outline"></ion-icon></a></li>
+    
+            <li> <a href="{% url 'productpage' %}#Mensection"><i class="fa-solid fa-person"></i>Men</a><ion-icon name="chevron-forward-outline"></ion-icon></a></li>
+    
+            <li> <a href="{% url 'productpage' %}#Kidsection"><i class="fa-solid fa-child"></i>Kids</a><ion-icon name="chevron-forward-outline"></ion-icon></a></li>
+    
+    
+            <p>&copy RL Clothing Online Clothing Store - All Rights Reserved.</p>
+        </ul>
+    </div>
+    </div>
+  </div>
+
+    <div class="wrapper">
+        <div class="form-box">
+            <h3>Fill Information</h3>
+            <form method="POST" action="#">
+                {% csrf_token %}
+                {{form}}
+            <a type="submit" href="{% url 'homepage' %}"><button type="submit" class="btn">Add Info</button></a>
+            </div>
+            </form>
+
+        </div>
+    </div>
+
+	<script src="{% static '/js/sidebar.js' %}"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

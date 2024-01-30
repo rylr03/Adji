@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: #f2f2f2;
+    align-items: center;
+}
+/* Navbar */
+
+.logo-photo img{
+    height: 60px;
+}
+nav{
+    background-color: #000;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    padding: 0 50px;
+}
+nav .logo-site{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin: 20px;
+}
+nav .nav-items{
+    display: flex;
+    flex: 1;
+    list-style: none;
+    list-style: 0 0 0 40px;
+}
+nav .nav-items li{
+    padding: 0 10px;
+}
+nav .nav-items li, a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+nav .nav-items a:hover{
+    color: rgba(255, 255, 255, 0.315);
+    transition: 0.3s ease-in-out;
+}
+
+
+/* Sidebar */
+
+.sidebar {
+    width: 270px;
+    background-color: #000;
+    position: absolute;
+    top: 20%;
+    bottom: 50%;
+    left: 0;
+    height: 150%;
+    font-family: 'Poppins', sans-serif;
+}
+.sidebar .logo-sidebar img {
+    margin: 30px 75px;
+    height: 120px;
+}
+.sidebar h2, .sidebar h3, .sidebar h4 {
+    text-align: center;
+    color: #fff;
+}
+.sidebar h2 {
+    font-size: 30px;
+    user-select: none;
+    margin-top: -20px;
+}
+.sidebar h3 {
+    padding: 20px;
+    font-size: 18px; 
+}
+.sidebar h4 {
+    font-size: 12px; 
+    user-select: none;
+}
+.sidebar .contents {
+    list-style: none;
+    padding: 0;
+    margin-top: 40%;
+}
+.sidebar ul h3 {
+    font-size: 15px;
+    user-select: none;
+}
+.contents li {
+    padding: 13px 10px 13px 20px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 14px;
+    transition: 0.3s ease-in-out;
+}
+.sidebar li ion-icon {
+    position: relative;
+    float: right;
+    align-items: center;
+    height: 25px;
+}
+.sidebar a:hover {
+    cursor: pointer;
+    width: auto;
+    color: #000;
+}
+.sidebar i{
+    font-size: 20px;
+    margin-right: 20px;
+}
+.sidebar  i:hover{
+    color: #000;
+
+}
+.contents p {
+    position: absolute;
+    bottom: 0;
+    margin-top: 20%;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgba(255, 255, 255, 0.521);
+}
+
+
+
+/* Register Form */
+
+.wrapper .form-box {
+    position: absolute;
+    top: 55%;
+    left: 35%;
+    background-color: #fff;
+    border-radius: 20px;
+    border: 1px solid rgb(255, 255, 255);
+    padding: 45px;
+    justify-content: center;
+}
+
+form{
+    margin-top: 15px;
+    display: block;
+    align-content: center;
+}
+.form-box h3{
+    text-align: center;
+    color: #000;
+    font-size: 30px;
+}
+.input-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    margin: 5px 0;
+}
+
+.input-box label{
+    margin-bottom: 5px;
+    color: #fff;
+    font-size: 0.9em;
+}
+.input-box input{
+    width: 100%;
+    height: 30px;
+    box-sizing: border-box;
+}
+.input-box select option{
+    color: rgba(255, 255, 255, 0.952)
+}
+.side-side {
+    display: flex;
+}
+.side-side .input-box{
+    /* margin: top right bottom left; */
+    padding: 0 50px 5px 50px;
+}
+.side-side .input-box .eye-icon{
+    position: absolute;
+    color: #fff;
+    left: 44%;
+    margin-top: 28px;
+    font-size: 15px;
+    cursor: pointer;
+}
+.side-side .input-box .eye-icon1{
+    position: absolute;
+    color: #fff;
+    right: 70px;
+    margin-top: 28px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.input-box select{
+    width: 100%;
+    height: 30px;
+}
+.radio-button{
+    padding: 20px;
+    display: flex;
+    color: #fff;
+    margin-left: 30px;
+}
+.radio-button{
+    padding: 15px 8em 15px 7em;
+    justify-content: space-between;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+.radio-button label {
+    font-size: 0.8em;
+}
+.radio-button label a{
+    text-decoration: none;
+    color: rgb(180, 39, 39);
+
+}
+.radio-button label a:hover{
+    text-decoration: underline;
+}
+
+.btn{
+    margin-left: 10%;
+    width: 80%;
+    height: 40px;
+    background: #121312;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.8em;
+    color: #fff;
+}
+.btn:hover{
+    background-color: rgba(31, 31, 31, 0.329);
+    transition: 0.5s;
+}
+.register-login{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.8em;
+}
+.register-login p{
+    color: #fff;
+}
+.register-login a{
+    color: rgb(180, 39, 39);
+
+}
+.register-login a:hover{
+    text-decoration: underline;
+}
+@media (max-width: 584px) {
+    nav{
+        display: none;
+        
+    }
+}
