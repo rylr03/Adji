@@ -133,28 +133,26 @@ nav .nav-items a:hover{
 
 /* Content */
 
-.contain{
-    width: 63%;
-    position: relative;
-    margin-top: 35px;
-    left: 25%;
-}
-.form-box form{
-    display: block;
-}
-.form-box {
-    color: #000;
+.contain .form-box {
+    position: absolute;
+    top: 55%;
+    left: 35%;
+    background-color: #fff;
+    border-radius: 20px;
+    border: 1px solid rgb(255, 255, 255);
+    padding: 45px;
+    justify-content: center;
 }
 
-.contain .title-page{
-    display: flex;
-    justify-content: space-between;
-    font-size: 20px;
+form{
+    margin-top: 15px;
+    display: block;
+    align-content: center;
 }
-.contain .title-page i{
-    padding-right: 15px;
-    font-size: 18px;
+.form-box h3{
+    text-align: center;
     color: #000;
+    font-size: 30px;
 }
 
 .contain .title-page h1{

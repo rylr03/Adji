@@ -76,32 +76,6 @@ nav form button:hover{
     background-color: #5f5f5f;
     transition: 0.3s ease-in-out;
 }
-.cart-button, .account-page{
-    margin: 20px;
-    cursor: pointer;
-}
-.cart-button ion-icon{
-    font-size: 45px;
-    color: #ffffff;
-}
-.cart-button ion-icon:hover{
-    color: #5f5f5f;
-    transition: 0.3s;
-}
-.account-page ion-icon{
-    font-size: 60px; 
-    color: #fff;
-}
-.account-page ion-icon:hover{
-    color: #5f5f5f;
-}
-.account-page p{
-    position: relative;
-    color: #fff;
-    font-size: 9px;
-    margin: -6px 2px 0 0;
-    text-align: center;
-}
 
 /* Sidebar */
 
@@ -185,22 +159,26 @@ nav form button:hover{
 
 /* Contents */
 
-.wrapper{
-    width: 73%;
-    position: relative;
-    margin-top: 35px;
-    left: 25%;
+.wrapper .form-box {
+    position: absolute;
+    top: 55%;
+    left: 35%;
+    background-color: #fff;
+    border-radius: 20px;
+    border: 1px solid rgb(255, 255, 255);
+    padding: 45px;
+    justify-content: center;
 }
 
-.wrapper .title-page{
-    display: flex;
-    justify-content: space-between;
-    font-size: 20px;
+form{
+    margin-top: 15px;
+    display: block;
+    align-content: center;
 }
-.wrapper .title-page i{
-    padding-right: 15px;
-    font-size: 20px;
-    color: #fff;
+.form-box h3{
+    text-align: center;
+    color: #000;
+    font-size: 30px;
 }
 .btn-back{
     width: 130px;
